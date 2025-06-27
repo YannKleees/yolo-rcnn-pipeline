@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "yolo-rcnn-pipeline"
+version         = "0.1.0"
+description     = "YOLO‑v11 + Faster‑RCNN dental‑x‑ray pipeline"
+requires-python = ">=3.9"
+dependencies = [
+  "torch>=2.1",
+  "torchvision>=0.18",
+  "ultralytics>=8.2",
+  "opencv-python",
+  "pyyaml",
+  "tqdm",
+  "matplotlib",
+]
+
+[project.optional-dependencies]
+wandb   = ["wandb"]
+kaggle  = ["kaggle"]
+hf      = ["huggingface-hub"]
+dev     = ["pytest", "black", "ruff"]
+
+[project.scripts]
+yrcnn = "yrcnn.cli:main"
+
+# ----------------------------------------------------------------------
+# tell setuptools that sources live in “src/” and enumerate sub‑packages
+# ----------------------------------------------------------------------
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where      = ["src"]
+include    = ["yrcnn*"]          # yrcnn and all its sub‑packages
+exclude    = ["*.tests*"]
+

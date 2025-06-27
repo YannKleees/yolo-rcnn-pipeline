@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: yolo-rcnn-pipeline
+Version: 0.1.0
+Summary: YOLO‑v11 + Faster‑RCNN dental‑x‑ray pipeline
+Requires-Python: >=3.9
+Requires-Dist: torch>=2.1
+Requires-Dist: torchvision>=0.18
+Requires-Dist: ultralytics>=8.2
+Requires-Dist: opencv-python
+Requires-Dist: pyyaml
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Provides-Extra: wandb
+Requires-Dist: wandb; extra == "wandb"
+Provides-Extra: kaggle
+Requires-Dist: kaggle; extra == "kaggle"
+Provides-Extra: hf
+Requires-Dist: huggingface-hub; extra == "hf"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: ruff; extra == "dev"

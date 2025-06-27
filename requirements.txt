@@ -1,0 +1,18 @@
+
+---
+
+#### **`requirements.txt`** (only to keep plain‑txt mirror in sync)  
+
+```diff
+ torch>=2.1
+ torchvision>=0.18
+ ultralytics>=8.2
+ opencv-python
+ pyyaml
+ tqdm
+ matplotlib          # utils.viz
+
+pytest>=8.0         # dev but handy for everyone
+ wandb               # optional telemetry – auto‑disabled if API key missing
+ kaggle              # optional, enables automatic Dentex download
+ huggingface-hub     # optional, fallback Dentex download
