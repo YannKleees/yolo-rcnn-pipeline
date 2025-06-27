@@ -14,8 +14,11 @@ import torch
 import yaml
 from torch.utils.data import Dataset
 
-
 class LocalDetectionDataset(Dataset):
+    """
+    LocalDetectionDataset
+    A dataset class for loading images and YOLO-style labels from a local directory.
+    """
     def __init__(self,
                  root: str | Path,
                  split: str = "train",
@@ -30,7 +33,6 @@ class LocalDetectionDataset(Dataset):
             self.root / "labels" / split / f"{p.stem}.txt" for p in self.imgs
         ]
 
-        # ----- class names -------------------------------------------------- #
         cls_txt = self.root / "labels" / "classes.txt"
         if cls_txt.exists():
             self.class_names = cls_txt.read_text().splitlines()
@@ -41,8 +43,7 @@ class LocalDetectionDataset(Dataset):
             self.class_names = ["tooth"]       # sensible fallback
 
         self.n_classes = len(self.class_names)
-
-    # --------------------------------------------------------------------- #
+        
     def __len__(self) -> int:
         return len(self.imgs)
 
@@ -52,7 +53,6 @@ class LocalDetectionDataset(Dataset):
         img = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
         h, w, _ = img.shape
 
-        # read YOLO v5/8 txt file
         boxes, labels = [], []
         for row in self.lbls[idx].read_text().splitlines():
             cls, xc, yc, bw, bh = map(float, row.split())

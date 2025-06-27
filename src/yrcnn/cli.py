@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-One public entry‑point for everything🤘
+One public entry‑point for everything
 $ yrcnn       train dentex --model yolo  --epochs 10
 $ yrcnn       train dentex --model rcnn  --epochs 10
 $ yrcnn       viz   coco   --n 8

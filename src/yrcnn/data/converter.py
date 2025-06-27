@@ -10,13 +10,15 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-
+# Convert COCO bounding box to YOLO format.
+# COCO bbox: [x, y, width, height]
 def _to_yolo(bbox, w, h):
     x, y, bw, bh = bbox
     xc, yc = x + bw / 2, y + bh / 2
     return xc / w, yc / h, bw / w, bh / h
 
-
+# Convert a single COCO image annotation to YOLO format and save it as a text file.
+# `img_id` is the ID of the image in the COCO JSON file.
 def convert_one(img_id: int, coco_json: Path, out_dir: Path) -> None:
     data = json.loads(coco_json.read_text())
     img_meta = next(i for i in data["images"] if i["id"] == img_id)

@@ -10,6 +10,7 @@ src/yolo_rcnn_pipeline.egg-info/requires.txt
 src/yolo_rcnn_pipeline.egg-info/top_level.txt
 src/yrcnn/__init__.py
 src/yrcnn/cli.py
+src/yrcnn/yrcnn_tui.py
 src/yrcnn/data/__init__.py
 src/yrcnn/data/converter.py
 src/yrcnn/data/datasets.py

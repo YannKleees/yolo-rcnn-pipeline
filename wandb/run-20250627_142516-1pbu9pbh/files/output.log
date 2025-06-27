@@ -1,0 +1,4 @@
+
+▶ C:\Users\yannk\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe -m yrcnn.training.train_yolo --data coco --model yolo --epochs 5 --batch 8 --device cpu --dry-run
+
+✅ Training launched!

@@ -1,0 +1,31 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.11.9",
+  "startedAt":  "2025-06-27T12:25:17.199338Z",
+  "program":  "c:\\Users\\yannk\\orthodontic\\src\\yrcnn\\yrcnn_tui.py",
+  "codePath":  "src\\yrcnn\\yrcnn_tui.py",
+  "git":  {
+    "remote":  "https://gitlab.maastrichtuniversity.nl/I6340643/orthodontic.git",
+    "commit":  "fd552d16184752ea9199868442182d4aafa4bc54"
+  },
+  "email":  "yannklees@gmail.com",
+  "root":  "C:\\Users\\yannk\\orthodontic",
+  "host":  "Laptop_Yann",
+  "executable":  "C:\\Users\\yannk\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+  "codePathLocal":  "src\\yrcnn\\yrcnn_tui.py",
+  "cpu_count":  16,
+  "cpu_count_logical":  22,
+  "disk":  {
+    "/":  {
+      "total":  "1022415409152",
+      "used":  "203632607232"
+    }
+  },
+  "memory":  {
+    "total":  "33819615232"
+  },
+  "cpu":  {
+    "count":  16,
+    "countLogical":  22
+  }
+}
